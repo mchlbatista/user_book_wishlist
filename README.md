@@ -18,7 +18,7 @@ Due the nature of "example" type of project, the DB will be seeded with users(10
 
 To access to the API Swagger navigate to the [project root url](http://localhost)
 
-![swagger_img]()
+![swagger_img](https://github.com/mchlbatista/user_book_wishlist/blob/master/Swagger.png)
 
 
 ### Run Test
