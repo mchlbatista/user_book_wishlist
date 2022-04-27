@@ -81,7 +81,9 @@ class UserWishlistResource(Resource):
         """
         body = request.get_json()
 
-        wishlist = Wishlist.add_many_books(user_id, body["wishlist_id"], body["book_ids"])
+        wishlist = Wishlist.add_many_books(
+            user_id, body["wishlist_id"], body["book_ids"]
+        )
         if wishlist:
             return wishlist, 200
         api.abort(400, "Invalid User, Books or Wishlist IDs.")

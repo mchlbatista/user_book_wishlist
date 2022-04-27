@@ -14,8 +14,8 @@ wishlist_many_books_models = api.model(
     "Add Books",
     {
         "wishlist_id": fields.Integer(required=True, min=1, description="Wishlist ID"),
-        "book_ids": fields.List(fields.Integer, required=True)
-    }
+        "book_ids": fields.List(fields.Integer, required=True),
+    },
 )
 
 user = api.model(

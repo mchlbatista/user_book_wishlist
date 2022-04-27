@@ -60,7 +60,7 @@ def test_add_book_to_wishlist(
         # Add Books to a wishlist with invalid Input
         (1, {"wishlist_id": 1}, False, 400),
         # Add Books to owned wishlist
-        (4, {"wishlist_id": 4, "book_ids": [1,2,3,100]}, True, 200),
+        (4, {"wishlist_id": 4, "book_ids": [1, 2, 3, 100]}, True, 200),
     ],
 )
 def test_add_many_books_to_wishlist(
@@ -85,7 +85,9 @@ def test_add_many_books_to_wishlist(
         (1, {}, True, 200),
     ],
 )
-def test_get_user_wishlists(flask_app, client, user_id, seeder, response, expected_status_code):
+def test_get_user_wishlists(
+    flask_app, client, user_id, seeder, response, expected_status_code
+):
     # Given
     url = f"/wishlist/{user_id}"
     if seeder:
@@ -95,8 +97,9 @@ def test_get_user_wishlists(flask_app, client, user_id, seeder, response, expect
     # Then
     assert response.status_code == expected_status_code
     if response.status_code == 200:
-        assert response.json.get('user', False)
-        assert response.json.get('wishlists', False)
+        assert response.json.get("user", False)
+        assert response.json.get("wishlists", False)
+
 
 @pytest.mark.parametrize(
     "seeder",
@@ -114,8 +117,8 @@ def test_get_all(flask_app, client, seeder):
     response = client.get(url)
     assert response.status_code == 200
     if seeder:
-        assert response.json[0].get('id', False)
-        assert response.json[0].get('name', False)
-        assert response.json[0].get('books') == []
+        assert response.json[0].get("id", False)
+        assert response.json[0].get("name", False)
+        assert response.json[0].get("books") == []
     else:
         assert response.json == []
