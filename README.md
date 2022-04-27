@@ -12,7 +12,7 @@ This service will allow the user to list, add, update or delete books for an own
 
 ### Run Locally
 ---
-The Project uses Docker to run locally and can by ran using the command `make run`
+The Project uses Docker to run locally and can be ran by using the command `make run`
 
 Due the nature of "example" type of project, the DB will be seeded with users(10), books(10) and wishlists(10). Also a pre-relationship between the created wishlists and the users will be generated. Is expected after the DB seeding each user to have one wishlist. The assignment of books to any wishlist will be done using the implemented API endpoints.
 
