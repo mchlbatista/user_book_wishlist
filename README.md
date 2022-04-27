@@ -2,7 +2,7 @@
 ---
 User Book Wishlist Management API
 
-Microservice to Manage
+This service will allow the user to list, add, update or delete books for an owned wishlist.
 
 ## Local Setup
 ---
