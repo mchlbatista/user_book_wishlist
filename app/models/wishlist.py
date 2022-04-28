@@ -1,4 +1,4 @@
-from sqlalchemy.sql import func
+import datetime
 from app import db
 
 from . import Book
@@ -10,7 +10,7 @@ class Wishlist(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     name = db.Column(db.String(255))
     created_at = db.Column(
-        db.DateTime(timezone=True), server_default=func.now(), nullable=False
+        db.DateTime(timezone=True), default=datetime.datetime.utcnow, nullable=False
     )
 
     books = db.relationship(
