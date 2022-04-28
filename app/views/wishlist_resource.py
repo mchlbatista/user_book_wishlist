@@ -14,7 +14,7 @@ from sqlalchemy.orm import joinedload
 wishlist_ns = api.namespace("wishlist", description="User Book Wishlist operations")
 
 
-@wishlist_ns.route("/")
+@wishlist_ns.route("/", strict_slashes=False)
 class WishlistResource(Resource):
     """
     Wishlist Operations
