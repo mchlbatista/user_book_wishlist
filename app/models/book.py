@@ -1,8 +1,6 @@
 import datetime
 from app import db
 
-from models.wishlist_book import wishlist_book_table
-
 
 class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
