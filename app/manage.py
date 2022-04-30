@@ -10,7 +10,7 @@ USER_COUNT = 5
 BOOK_COUNT = 10
 
 
-def seed(app, user_count=10, book_count=10):
+def seed(app):
     """
     Seed the DB with data
     """
