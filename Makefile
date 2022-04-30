@@ -2,7 +2,6 @@ ARTIFACT=$(shell basename $(PWD))
 
 build:
 	docker build --no-cache \
-		--target=builder \
 		-t "${ARTIFACT}:latest" .
 
 run: build
