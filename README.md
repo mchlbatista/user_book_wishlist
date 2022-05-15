@@ -16,14 +16,14 @@ The Project uses Docker to run locally and can be ran by using the command `make
 
 Due the nature of "example" type of project, the DB will be seeded with users(10), books(10) and wishlists(10). Also a pre-relationship between the created wishlists and the users will be generated. Is expected after the DB seeding each user to have one wishlist. The assignment of books to any wishlist will be done using the implemented API endpoints.
 
-To access to the API Swagger navigate to the [project root url](http://localhost)
+To access to the API Swagger navigate to the [project root url](http://localhost:8080)
 
 ![swagger_img](https://github.com/mchlbatista/user_book_wishlist/blob/master/Swagger.png)
 
 
 ### Run Test
 ___
-From your `virtual env` execute `make tests`
+From your `virtual env` execute `make test`
 
 ## Used Tech
 

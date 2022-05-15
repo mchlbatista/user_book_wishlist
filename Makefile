@@ -5,7 +5,7 @@ build:
 		-t "${ARTIFACT}:latest" .
 
 run: build
-	docker run -p 80:80 \
+	docker run -p 8080:80 \
 		--rm --env-file=./.env \
 		${ARTIFACT}:latest
 
